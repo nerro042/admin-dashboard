@@ -1,5 +1,4 @@
 "use client";
-
 import styles from "./chart.module.css";
 import {
   LineChart,
@@ -14,37 +13,37 @@ import {
 const data = [
   {
     name: "Sun",
-    visit: 4000,
+    visits: 4000,
     click: 2400,
   },
   {
     name: "Mon",
-    visit: 3000,
-    click: 1398,
+    visits: 4000,
+    click: 2400,
   },
   {
     name: "Tue",
-    visit: 2000,
-    click: 3800,
+    visits: 2000,
+    click: 3000,
   },
   {
     name: "Wed",
-    visit: 2780,
+    visits: 2700,
     click: 3908,
   },
   {
     name: "Thu",
-    visit: 1890,
+    visits: 1890,
     click: 4800,
   },
   {
     name: "Fri",
-    visit: 2390,
-    click: 3800,
+    visits: 2390,
+    click: 2800,
   },
   {
     name: "Sat",
-    visit: 3490,
+    visits: 3490,
     click: 4300,
   },
 ];
@@ -53,6 +52,7 @@ const Chart = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Weekly Recap</h2>
+
       <ResponsiveContainer width="100%" height="90%">
         <LineChart
           width={500}
@@ -71,7 +71,7 @@ const Chart = () => {
           <Legend />
           <Line
             type="monotone"
-            dataKey="visit"
+            dataKey="visits"
             stroke="#8884d8"
             strokeDasharray="5 5"
           />

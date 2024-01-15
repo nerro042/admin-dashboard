@@ -1,10 +1,10 @@
 .container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   background-color: #2e374a;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
   width: max-content;
 }
 

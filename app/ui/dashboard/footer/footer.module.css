@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 1.875rem;
   color: var(--textSoft);
 }
 
@@ -11,5 +11,5 @@
 }
 
 .text {
-  font-size: 12px;
+  font-size: 0.75rem;
 }

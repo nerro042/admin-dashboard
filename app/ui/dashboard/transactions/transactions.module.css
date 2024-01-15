@@ -1,11 +1,11 @@
 .container {
   background-color: var(--bgSoft);
-  padding: 20px;
-  border-radius: 10px;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
 }
 
 .title {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   font-weight: 200;
   color: var(--textSoft);
 }
@@ -15,12 +15,12 @@
 }
 
 .table td {
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 .user {
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
   align-items: center;
 }
 
@@ -30,9 +30,9 @@
 }
 
 .status {
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 14px;
+  border-radius: 0.3125rem;
+  padding: 0.3125rem;
+  font-size: 0.875rem;
   color: white;
 }
 

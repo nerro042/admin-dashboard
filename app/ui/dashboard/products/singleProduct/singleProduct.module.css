@@ -1,33 +1,33 @@
 .container {
   display: flex;
-  gap: 50px;
-  margin-top: 20px;
+  gap: 3.125rem;
+  margin-top: 1.25rem;
 }
 
 .infoContainer {
   flex: 1;
   background-color: var(--bgSoft);
-  padding: 20px;
-  border-radius: 10px;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
   font-weight: bold;
   color: var(--textSoft);
   height: max-content;
 }
 
-.imgContainer {
-  width: 100%;
-  height: 300px;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
 .formContainer {
   flex: 3;
   background-color: var(--bgSoft);
-  padding: 20px;
-  border-radius: 10px;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+}
+
+.imgContainer {
+  width: 100%;
+  height: 18.75rem;
+  position: relative;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
 }
 
 .form {
@@ -38,25 +38,25 @@
 .form input,
 .form textarea,
 .form select {
-  padding: 20px;
-  border: 2px solid #2e374a;
-  border-radius: 5px;
+  padding: 1.25rem;
+  border: 0.125rem solid #2e374a;
+  border-radius: 0.3125rem;
   background-color: var(--bg);
   color: var(--text);
-  margin: 10px 0px;
+  margin: 0.625rem 0rem;
 }
 
 .form label {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .form button {
   width: 100%;
-  padding: 20px;
+  padding: 1.25rem;
   background-color: teal;
   color: var(--text);
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }

@@ -19,7 +19,7 @@ const Transactions = () => {
             <td>
               <div className={styles.user}>
                 <Image
-                  src="/noavatar.png"
+                  src={"/noavatar.png"}
                   alt=""
                   width={40}
                   height={40}
@@ -33,14 +33,15 @@ const Transactions = () => {
                 Pending
               </span>
             </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>14.01.2024</td>
+            <td>$6000</td>
           </tr>
+
           <tr>
             <td>
               <div className={styles.user}>
                 <Image
-                  src="/noavatar.png"
+                  src={"/noavatar.png"}
                   alt=""
                   width={40}
                   height={40}
@@ -52,14 +53,15 @@ const Transactions = () => {
             <td>
               <span className={`${styles.status} ${styles.done}`}>Done</span>
             </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>14.01.2024</td>
+            <td>$6000</td>
           </tr>
+
           <tr>
             <td>
               <div className={styles.user}>
                 <Image
-                  src="/noavatar.png"
+                  src={"/noavatar.png"}
                   alt=""
                   width={40}
                   height={40}
@@ -73,14 +75,15 @@ const Transactions = () => {
                 Cancelled
               </span>
             </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>14.01.2024</td>
+            <td>$6000</td>
           </tr>
+
           <tr>
             <td>
               <div className={styles.user}>
                 <Image
-                  src="/noavatar.png"
+                  src={"/noavatar.png"}
                   alt=""
                   width={40}
                   height={40}
@@ -94,8 +97,8 @@ const Transactions = () => {
                 Pending
               </span>
             </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>14.01.2024</td>
+            <td>$6000</td>
           </tr>
         </tbody>
       </table>

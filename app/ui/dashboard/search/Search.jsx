@@ -1,5 +1,4 @@
 "use client";
-
 import { MdSearch } from "react-icons/md";
 import styles from "./search.module.css";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -20,6 +19,7 @@ const Search = ({ placeholder }) => {
     } else {
       params.delete("q");
     }
+
     replace(`${pathname}?${params}`);
   }, 300);
 
