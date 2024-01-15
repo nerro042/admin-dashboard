@@ -3,7 +3,7 @@ import { fetchUser } from "@/app/lib/data";
 import styles from "@/app/ui/dashboard/users/singleUser/singleUser.module.css";
 import Image from "next/image";
 
-const SingleUserPage = async ({ params }) => {
+const SingleUser = async ({ params }) => {
   const { id } = params;
   const user = await fetchUser(id);
 
@@ -15,19 +15,25 @@ const SingleUserPage = async ({ params }) => {
         </div>
         {user.username}
       </div>
+
       <div className={styles.formContainer}>
         <form action={updateUser} className={styles.form}>
           <input type="hidden" name="id" value={user.id} />
           <label>Username</label>
           <input type="text" name="username" placeholder={user.username} />
+
           <label>Email</label>
           <input type="email" name="email" placeholder={user.email} />
+
           <label>Password</label>
           <input type="password" name="password" />
+
           <label>Phone</label>
           <input type="text" name="phone" placeholder={user.phone} />
+
           <label>Address</label>
           <textarea type="text" name="address" placeholder={user.address} />
+
           <label>Is Admin?</label>
           <select name="isAdmin" id="isAdmin">
             <option value={true} selected={user.isAdmin}>
@@ -37,6 +43,7 @@ const SingleUserPage = async ({ params }) => {
               No
             </option>
           </select>
+
           <label>Is Active?</label>
           <select name="isActive" id="isActive">
             <option value={true} selected={user.isActive}>
@@ -46,6 +53,7 @@ const SingleUserPage = async ({ params }) => {
               No
             </option>
           </select>
+
           <button>Update</button>
         </form>
       </div>
@@ -53,4 +61,4 @@ const SingleUserPage = async ({ params }) => {
   );
 };
 
-export default SingleUserPage;
+export default SingleUser;

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const { default: mongoose } = require("mongoose");
 
 const userSchema = new mongoose.Schema(
   {
@@ -36,7 +36,9 @@ const userSchema = new mongoose.Schema(
       type: String,
     },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  }
 );
 
 const productSchema = new mongoose.Schema(
@@ -70,9 +72,12 @@ const productSchema = new mongoose.Schema(
       type: String,
     },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  }
 );
 
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
+
 export const Product =
   mongoose.models.Product || mongoose.model("Product", productSchema);

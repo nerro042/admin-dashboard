@@ -1,85 +1,60 @@
-import { Product, User } from "./models";
-import { connectToDB } from "./utils";
+import { User, Product } from "./models";
+import { connectDB } from "./utils";
 
 export const fetchUsers = async (q, page) => {
   const regex = new RegExp(q, "i");
 
-  const ITEM_PER_PAGE = 2;
+  const ITEMS_PER_PAGE = 2;
 
   try {
-    connectToDB();
+    connectDB();
     const count = await User.find({ username: { $regex: regex } }).count();
     const users = await User.find({ username: { $regex: regex } })
-      .limit(ITEM_PER_PAGE)
-      .skip(ITEM_PER_PAGE * (page - 1));
+      .limit(ITEMS_PER_PAGE)
+      .skip(ITEMS_PER_PAGE * (page - 1));
     return { count, users };
-  } catch (err) {
-    console.log(err);
-    throw new Error("Failed to fetch users!");
+  } catch (error) {
+    console.log(error);
+    throw new Error("failed to fetch users");
   }
 };
 
 export const fetchUser = async (id) => {
-  console.log(id);
   try {
-    connectToDB();
+    connectDB();
     const user = await User.findById(id);
     return user;
-  } catch (err) {
-    console.log(err);
-    throw new Error("Failed to fetch user!");
+  } catch (error) {
+    console.log(error);
+    throw new Error("failed to fetch user");
   }
 };
 
 export const fetchProducts = async (q, page) => {
-  console.log(q);
   const regex = new RegExp(q, "i");
 
-  const ITEM_PER_PAGE = 2;
+  const ITEMS_PER_PAGE = 2;
 
   try {
-    connectToDB();
+    connectDB();
     const count = await Product.find({ title: { $regex: regex } }).count();
     const products = await Product.find({ title: { $regex: regex } })
-      .limit(ITEM_PER_PAGE)
-      .skip(ITEM_PER_PAGE * (page - 1));
+      .limit(ITEMS_PER_PAGE)
+      .skip(ITEMS_PER_PAGE * (page - 1));
     return { count, products };
-  } catch (err) {
-    console.log(err);
-    throw new Error("Failed to fetch products!");
+  } catch (error) {
+    console.log(error);
+    throw new Error("failed to fetch products");
   }
 };
 
 export const fetchProduct = async (id) => {
   try {
-    connectToDB();
+    connectDB();
     const product = await Product.findById(id);
     return product;
-  } catch (err) {
-    console.log(err);
-    throw new Error("Failed to fetch product!");
+  } catch (error) {
+    console.log(error);
+    throw new Error("failed to fetch product");
   }
 };
-
-// DUMMY DATA
-
-export const cards = [
-  {
-    id: 1,
-    title: "Total Users",
-    number: 10.928,
-    change: 12,
-  },
-  {
-    id: 2,
-    title: "Stock",
-    number: 8.236,
-    change: -2,
-  },
-  {
-    id: 3,
-    title: "Revenue",
-    number: 6.642,
-    change: 18,
-  },
-];
