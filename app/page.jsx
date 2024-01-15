@@ -6,7 +6,7 @@ const Homepage = () => {
     <div className={styles.container2}>
       <h2>HOME PAGE</h2>
 
-      <Link href={styles.link}>
+      <Link href={"/dashboard"}>
         <button className={styles.btn}>go to admin</button>
       </Link>
     </div>
