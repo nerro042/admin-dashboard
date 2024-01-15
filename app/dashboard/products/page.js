@@ -1,5 +1,5 @@
-import Pagination from "@/app/ui/dashboard/pagination/Pagination";
-import Search from "@/app/ui/dashboard/search/Search";
+import Pagination from "@/app/ui/dashboard/pagination/Pagination.js";
+import Search from "@/app/ui/dashboard/search/Search.js";
 import styles from "@/app/ui/dashboard/products/products.module.css";
 import Image from "next/image";
 import Link from "next/link";
